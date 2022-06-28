@@ -28,7 +28,7 @@ app.use((error, req, res, next) => {
 });
 
 mongoose
-  .connect('mongodb+srv://nate:aspect_logies@cluster0.qhrmelh.mongodb.net/places?retryWrites=true&w=majority')
+  .connect('mongodb+srv://nate:aspect_logies@cluster0.qhrmelh.mongodb.net/mern?retryWrites=true&w=majority')
   .then(() => {
     console.log("connected to database")
     app.listen(5000);
