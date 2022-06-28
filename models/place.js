@@ -14,4 +14,4 @@ const placeSchema = new Schema({
   creator: { type: String, required: true },
 });
 
-module.exports = mongoose.model('Place', placeSchema) // first argument, starts with uppercase letter and the singular version. second argument is the schema that was just created.
+module.exports = mongoose.model("Place", placeSchema); // first argument, starts with uppercase letter and the singular version. second argument is the schema that was just created.
