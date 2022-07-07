@@ -77,13 +77,16 @@ const login = async (req, res, next) => {
 
   if (!existingUser || existingUser.password !== password) {
     const error = new HttpError(
-      "Email or password are incorrect, could not log you in",
+      "Email and or password are incorrect, could not log you in",
       401
     );
     return next(error);
   }
 
-  res.json({ message: "Logged In" });
+  res.json({
+    message: "Logged In",
+    user: existingUser.toObject({ getters: true }),
+  });
 };
 
 exports.getUsers = getUsers;
